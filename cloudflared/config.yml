@@ -1,5 +1,5 @@
 tunnel: f2fa659e-2ba4-4a10-a4ac-a0778b5c51b9
-credentials-file: /home/pi/.cloudflared/f2fa659e-2ba4-4a10-a4ac-a0778b5c51b9.json
+credentials-file: ./cloudflared/f2fa659e-2ba4-4a10-a4ac-a0778b5c51b9.json
 
 ingress:
   # Frontend to use the hostname for the main service
