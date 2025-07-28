@@ -1,0 +1,14 @@
+tunnel: hamro-api-tunnel
+credentials-file: /etc/cloudflared/tunnel.json
+
+ingress:
+  - hostname: api.hamrorealstate.store
+    service: http://localhost:3000
+
+  - hostname: web.pokharelsujan.info.np
+    service: http://localhost:4000
+
+  - hostname: ssh.pokharelsujan.info.np
+    service: ssh://localhost:22
+
+  - service: http_status:404
