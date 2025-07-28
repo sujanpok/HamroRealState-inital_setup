@@ -1,14 +1,22 @@
-tunnel: hamro-api-tunnel
-credentials-file: /etc/cloudflared/tunnel.json
+tunnel: f2fa659e-2ba4-4a10-a4ac-a0778b5c51b9
+credentials-file: /home/pi/.cloudflared/f2fa659e-2ba4-4a10-a4ac-a0778b5c51b9.json
 
 ingress:
-  - hostname: api.hamrorealstate.store
-    service: http://localhost:3000
+  # Frontend to use the hostname for the main service
+  - hostname: pokharelsujan.info.np
+    service: http://8000:4200
+  # Microservice to use the hostname for the auth service
+  - hostname: auth.pokharelsujan.info.np
+    service: http://8000:3001
+  # Microservice to use the hostname for the room service
+  - hostname: room.pokharelsujan.info.np
+    service: http://8000:3002
+  # Microservice to use the hostname for the chat service
+  - hostname: chat.pokharelsujan.info.np
+    service: http://8000:3003
+  # Microservice to use the hostname for the notification service
+  - hostname: notification.pokharelsujan.info.np
+    service: http://8000:3004
 
-  - hostname: web.pokharelsujan.info.np
-    service: http://localhost:4000
-
-  - hostname: ssh.pokharelsujan.info.np
-    service: ssh://localhost:22
-
+  # Default fallback for unmatched requests
   - service: http_status:404
