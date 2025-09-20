@@ -4,7 +4,7 @@ credentials-file: ./cloudflared/f2fa659e-2ba4-4a10-a4ac-a0778b5c51b9.json
 ingress:
   # Frontend to use the hostname for the main service
   - hostname: pokharelsujan.info.np
-    service: http://8000:4200
+    service: http://localhost:4200
   # Microservice to use the hostname for the auth service
   - hostname: auth.pokharelsujan.info.np
     service: http://8000:3001
